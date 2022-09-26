@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" id="icon" href="images/1068727.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/home.css" />
+    <title id="title">Game</title>
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light mainNav">
+        <div class="container-fluid">
+            <div class=" nav2" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-light text-dark  btn1" id="gear"
+                            data-bs-toggle="collapse" data-bs-target="#demo"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="23" height="23" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                <path
+                                    d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                            </svg>
+                        </button>
+                        <div id="demo" class="collapse">
+                            <div class="box">
+                                <select id="selected" multiple title="" onclick="test()">
+
+                                    <option value="1" class="navbar3">&nbsp;Easy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+
+                                    <option value="2" class="navbar2">&nbsp;Normal &nbsp;&nbsp;&nbsp;&nbsp;</option>
+
+                                    <option value="3" class="navbar1">&nbsp;Hard &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+
+
+                                </select>
+                            </div>
+                        </div>
+                        <span class="logo">
+                            <span id="iconTxt" class="iconTxt"> العب </span>
+                            <img id="pageIcon" src="images/download-removebg-preview.png"
+                                class="icon" alt="">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <div class="card result" id="final">
+        <div class="card-content">
+          <div class="card-body">
+            <br><div class="media d-flex icons">
+                
+              <div class="media-body text-left">
+                <h3 class="text-primary" id="score1">00</h3>
+                <span>Your Score</span>
+              </div>
+              <div class="align-self-center">
+                <i class="icon-cup text-primary font-large-2 float-right"></i>
+              </div>
+            </div>
+            <br><br>
+            <button type="button" class="btn btn-outline-primary buttons" onclick="tryagain()">Play again</button>
+          </div>
+        </div>
+    </div>
+    <div class="card result" id="final2">
+        <div class="card-content">
+          <div class="card-body">
+            <br><div class="media d-flex icons">
+                
+              <div class="media-body text-left">
+                <h3 class="text-success" id="score2">00</h3>
+                <span>Your Score</span>
+              </div>
+              <div class="align-self-center">
+                <i class="icon-speech text-success font-large-2 float-left"></i>
+              </div>
+            </div>
+            <br><br>
+            <button type="button" class="btn btn-outline-success buttons" onclick="tryagain()">Play again</button>
+          </div>
+        </div>
+    </div>
+    <div class="card result" id="final3">
+        <div class="card-content">
+          <div class="card-body">
+            <br><div class="media d-flex icons">
+                
+              <div class="media-body text-left">
+                <h3 class="text-danger" id="score3">00</h3>
+                <span>Your Score</span>
+              </div>
+              <div class="align-self-center">
+                <i class="icon-rocket text-danger font-large-2 "></i>
+              </div>
+            </div>
+            <br><br>
+            <button type="button" class="btn btn-outline-danger buttons" onclick="tryagain()">Play again</button>
+          </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-outline-secondary btn1" id="btn" onclick="change()">العب</button>
+    <div class="container register" id="register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="images/1188519.png"
+                    alt="" />
+                <h3>Write</h3>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading" id="word"></h3>
+                        <div class="row register-form">
+                            <div class="group input">
+                                <input type="text" id="txt" onkeyup="check() "  autocomplete="off">
+                                <span class="bar"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <span class="label1 " id="count"></span><br><br>
+                                <div class="Loading" id="load">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                               
+                            </div>
+                            <div class="col-sm-1">
+                                <h5 class="score" id="score">00</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>
